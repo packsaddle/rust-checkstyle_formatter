@@ -1,3 +1,8 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/packsaddle/rust-checkstyle_formatter/compare/v1.0.0...v1.0.1) (2017-10-20)
+
+* update readme
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/packsaddle/rust-checkstyle_formatter/compare/v0.0.1...v1.0.0) (2017-10-14)
 
