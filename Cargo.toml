@@ -14,7 +14,7 @@ keywords = ["checkstyle"]
 license = "MIT/Apache-2.0"
 name = "checkstyle_formatter"
 repository = "https://github.com/packsaddle/rust-checkstyle_formatter"
-version = "1.0.0"
+version = "1.0.1"
 
 [badges.appveyor]
 project_name = "sanemat/rust-checkstyle_formatter"
