@@ -102,15 +102,15 @@ mod test {
     fn build_error_piece() {
         let column = 1;
         let line = 2;
-        let message = "some message";
-        let severity = "info";
-        let source = "some checkstyle";
+        let message = "some message".to_owned();
+        let severity = "info".to_owned();
+        let source = "some checkstyle".to_owned();
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_owned(),
-            severity: severity.to_owned(),
-            source: source.to_owned(),
+            message,
+            severity,
+            source,
         };
         assert_eq!(piece.line, 2);
     }
@@ -118,15 +118,15 @@ mod test {
     fn piece_to_xml_events() {
         let column = 1;
         let line = 2;
-        let message = "some message";
-        let severity = "info";
-        let source = "some checkstyle";
+        let message = "some message".to_owned();
+        let severity = "info".to_owned();
+        let source = "some checkstyle".to_owned();
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_owned(),
-            severity: severity.to_owned(),
-            source: source.to_owned(),
+            message,
+            severity,
+            source,
         };
         let line1 = r#"<error column="1" line="2" message="some message" "#;
         let line2 = r#"severity="info" source="some checkstyle"/>"#;
@@ -144,19 +144,19 @@ mod test {
     fn build_error_file() {
         let column = 1;
         let line = 2;
-        let message = "some message";
-        let severity = "info";
-        let source = "some checkstyle";
+        let message = "some message".to_owned();
+        let severity = "info".to_owned();
+        let source = "some checkstyle".to_owned();
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_owned(),
-            severity: severity.to_owned(),
-            source: source.to_owned(),
+            message,
+            severity,
+            source,
         };
-        let name = "path/to/file";
+        let name = "path/to/file".to_owned();
         let file = ErrorFile {
-            name: name.to_owned(),
+            name,
             error_pieces: vec![piece],
         };
         assert_eq!(file.error_pieces[0].line, 2);
@@ -167,19 +167,19 @@ mod test {
     fn error_file_to_events() {
         let column = 1;
         let line = 2;
-        let message = "some message";
-        let severity = "info";
-        let source = "some checkstyle";
+        let message = "some message".to_owned();
+        let severity = "info".to_owned();
+        let source = "some checkstyle".to_owned();
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_owned(),
-            severity: severity.to_owned(),
-            source: source.to_owned(),
+            message,
+            severity,
+            source,
         };
-        let name = "path/to/file";
+        let name = "path/to/file".to_owned();
         let file = ErrorFile {
-            name: name.to_owned(),
+            name,
             error_pieces: vec![piece],
         };
 
@@ -202,19 +202,19 @@ mod test {
     fn build_checkstyle() {
         let column = 1;
         let line = 2;
-        let message = "some message";
-        let severity = "info";
-        let source = "some checkstyle";
+        let message = "some message".to_owned();
+        let severity = "info".to_owned();
+        let source = "some checkstyle".to_owned();
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_owned(),
-            severity: severity.to_owned(),
-            source: source.to_owned(),
+            message,
+            severity,
+            source,
         };
-        let name = "path/to/file";
+        let name = "path/to/file".to_owned();
         let file = ErrorFile {
-            name: name.to_owned(),
+            name,
             error_pieces: vec![piece],
         };
         let checkstyle = Container { error_files: vec![file] };
@@ -224,19 +224,19 @@ mod test {
     fn build_checkstyle_to_xml() {
         let column = 1;
         let line = 2;
-        let message = "some message";
-        let severity = "info";
-        let source = "some checkstyle";
+        let message = "some message".to_owned();
+        let severity = "info".to_owned();
+        let source = "some checkstyle".to_owned();
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_owned(),
-            severity: severity.to_owned(),
-            source: source.to_owned(),
+            message,
+            severity,
+            source,
         };
-        let name = "path/to/file";
+        let name = "path/to/file".to_owned();
         let file = ErrorFile {
-            name: name.to_owned(),
+            name,
             error_pieces: vec![piece],
         };
         let checkstyle = Container { error_files: vec![file] };
