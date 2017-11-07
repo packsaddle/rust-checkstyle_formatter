@@ -108,9 +108,9 @@ mod test {
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_string(),
-            severity: severity.to_string(),
-            source: source.to_string(),
+            message: message.to_owned(),
+            severity: severity.to_owned(),
+            source: source.to_owned(),
         };
         assert_eq!(piece.line, 2);
     }
@@ -124,9 +124,9 @@ mod test {
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_string(),
-            severity: severity.to_string(),
-            source: source.to_string(),
+            message: message.to_owned(),
+            severity: severity.to_owned(),
+            source: source.to_owned(),
         };
         let line1 = r#"<error column="1" line="2" message="some message" "#;
         let line2 = r#"severity="info" source="some checkstyle"/>"#;
@@ -150,13 +150,13 @@ mod test {
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_string(),
-            severity: severity.to_string(),
-            source: source.to_string(),
+            message: message.to_owned(),
+            severity: severity.to_owned(),
+            source: source.to_owned(),
         };
         let name = "path/to/file";
         let file = ErrorFile {
-            name: name.to_string(),
+            name: name.to_owned(),
             error_pieces: vec![piece],
         };
         assert_eq!(file.error_pieces[0].line, 2);
@@ -173,13 +173,13 @@ mod test {
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_string(),
-            severity: severity.to_string(),
-            source: source.to_string(),
+            message: message.to_owned(),
+            severity: severity.to_owned(),
+            source: source.to_owned(),
         };
         let name = "path/to/file";
         let file = ErrorFile {
-            name: name.to_string(),
+            name: name.to_owned(),
             error_pieces: vec![piece],
         };
 
@@ -208,13 +208,13 @@ mod test {
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_string(),
-            severity: severity.to_string(),
-            source: source.to_string(),
+            message: message.to_owned(),
+            severity: severity.to_owned(),
+            source: source.to_owned(),
         };
         let name = "path/to/file";
         let file = ErrorFile {
-            name: name.to_string(),
+            name: name.to_owned(),
             error_pieces: vec![piece],
         };
         let checkstyle = Container { error_files: vec![file] };
@@ -230,13 +230,13 @@ mod test {
         let piece = ErrorPiece {
             column,
             line,
-            message: message.to_string(),
-            severity: severity.to_string(),
-            source: source.to_string(),
+            message: message.to_owned(),
+            severity: severity.to_owned(),
+            source: source.to_owned(),
         };
         let name = "path/to/file";
         let file = ErrorFile {
-            name: name.to_string(),
+            name: name.to_owned(),
             error_pieces: vec![piece],
         };
         let checkstyle = Container { error_files: vec![file] };
